@@ -5,7 +5,7 @@ set -e
 : ${ACCESS_KEY:?"ACCESS_KEY env variable is required"}
 : ${SECRET_KEY:?"SECRET_KEY env variable is required"}
 : ${S3_PATH:?"S3_PATH env variable is required"}
-export DATA_PATH=${DATA_PATH:-/data/}
+export DATA_PATH=${DATA_PATH:-/backups/}
 CRON_SCHEDULE=${CRON_SCHEDULE:-0 1 * * *}
 
 echo "access_key=$ACCESS_KEY" >> /root/.s3cfg
